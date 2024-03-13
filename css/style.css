@@ -72,21 +72,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1;
 }
 
 .hard{
     width: calc(100% / 10);
-    aspect-ratio: 1/1;
 }
 
 .medium{
     width: calc(100% / 9);
-    aspect-ratio: 1/1;
 }
 
 .easy{
     width: calc(100% / 7);
-    aspect-ratio: 1/1;
 }
 
 

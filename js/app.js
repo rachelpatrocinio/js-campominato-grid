@@ -16,10 +16,13 @@ playBtn.addEventListener("click", function(){
     // con difficoltà MEDIUM => 81 caselle DA 1 e 81 (9 x 9)
     // con difficoltà EASY => 49 caselle DA 1 e 49 (7 x 7)
     let size = 10;
+    let gridClass = 'hard';
     if(difficulty.value === "easy"){
         size = 7;
+        gridClass = 'easy';
     }else if(difficulty.value === "medium"){
         size = 9;
+        gridClass = 'medium';
     }
 
     const numOfCells = size * size;
@@ -37,12 +40,9 @@ playBtn.addEventListener("click", function(){
         // 2A. AGGIUNGO LA CLASSE CHE DIA LO STILE ALL'ELEMENTO OGGETTO
         gridCell.className ="grid-cell";
         // 2B. AGGIUNGO LA CLASSE CHE DIA LA DIMENSIONE ALL'ELEMENTO OGGETTO
-        gridCell.classList.add("hard");
-        if(size === 9){
-            gridCell.classList.replace("hard","medium");
-        } else if(size === 7){
-            gridCell.classList.replace("hard","easy");
-        }
+
+        gridCell.classList.add(gridClass);
+
         // 3. APPENDO L'ELEMENTO OGGETTO AL CONTENITORE PADRE
         gridElement.append(gridCell);
         // 4. INSERISCO IL NUMERO ALL'INTERNO DELL'ELEMENTO OGGETTO.
@@ -52,7 +52,7 @@ playBtn.addEventListener("click", function(){
         gridCell.addEventListener("click", function(){
             console.log("Hai cliccato la cella", num);
             // QUANDO L'UTENTE CLICCA IL BACKGROUND-COLOR CAMBIERA'
-            this.classList.toggle("bg-azzure")
+            this.classList.toggle("bg-azzure");
         })
     }
 })
