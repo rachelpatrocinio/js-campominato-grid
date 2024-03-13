@@ -12,6 +12,12 @@ playBtn.addEventListener("click", function(){
     const difficulty = document.getElementById("difficulty");
     console.log(difficulty.value);
 
+    // 1. RECUPERO IL CONTENITORE PADRE CHE DOVRA' CONTENERE LA GRIGLIA
+    const gridElement = document.querySelector(".grid");
+    //console.log(gridElement);
+
+    gridElement.innerHTML="";
+
     // con difficoltà HARD (DEFAULT) => 100 caselle DA 1 e 100 (10 x 10)
     // con difficoltà MEDIUM => 81 caselle DA 1 e 81 (9 x 9)
     // con difficoltà EASY => 49 caselle DA 1 e 49 (7 x 7)
@@ -32,15 +38,13 @@ playBtn.addEventListener("click", function(){
         const num = i + 1; 
         console.log(num);
 
-        // 1. RECUPERO IL CONTENITORE PADRE CHE DOVRA' CONTENERE LA GRIGLIA
-        const gridElement = document.querySelector(".grid");
-        //console.log(gridElement);
+        
         // 2. CREO L'ELEMENTO OGGETTO CHE DOVRO' APPENDERE NEL CONTENITORE PADRE
         const gridCell = document.createElement("div");
         // 2A. AGGIUNGO LA CLASSE CHE DIA LO STILE ALL'ELEMENTO OGGETTO
         gridCell.className ="grid-cell";
         // 2B. AGGIUNGO LA CLASSE CHE DIA LA DIMENSIONE ALL'ELEMENTO OGGETTO
-
+        
         gridCell.classList.add(gridClass);
 
         // 3. APPENDO L'ELEMENTO OGGETTO AL CONTENITORE PADRE
