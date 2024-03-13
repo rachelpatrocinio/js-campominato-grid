@@ -1,6 +1,7 @@
 :root{
     --white: #ffffff;
     --acqua: #7FFFD3;
+    --azzure: #6FD1DA;
 }
 
 /* RESET */
@@ -19,6 +20,10 @@
 
 .justify-content-between{
     justify-content: space-between;
+}
+
+.bg-azzure{
+    background-color: var(--azzure);
 }
 
 /* LAYOUT */
@@ -70,6 +75,3 @@ body{
     line-height: 100px;
 }
 
-.bg-white{
-    background-color: white;
-}

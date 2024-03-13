@@ -9,18 +9,18 @@ const numOfCells = size * size;
 // CON UN CICLO PRENDO OGNI SINGOLA CELLA
 for(let i = 0; i < numOfCells; i++){
     const num = i + 1; 
-    console.log(num); // DA 1 A 100
+    //console.log(num); // DA 1 A 100
 
     //L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
     // RECUPERO IL BOTTONE DAL DOM
     const playBtn = document.querySelector(".play-btn");
-    console.log(playBtn);
+    //console.log(playBtn);
     // MI METTO IN ASCOLTO DEL CLICK SUL BOTTONE
     playBtn.addEventListener("click", function(){
         // AL CLICK GENERO UNA GRIGLIA
         // 1. RECUPERO IL CONTENITORE PADRE CHE DOVRA' CONTENERE LA GRIGLIA
         const gridElement = document.querySelector(".grid");
-        console.log(gridElement);
+        //console.log(gridElement);
         // 2. CREO L'ELEMENTO OGGETTO CHE DOVRO' APPENDERE NEL CONTENITORE PADRE
         const gridCell = document.createElement("div");
         // 2A. AGGIUNGO UNA CLASSE ALL'ELEMENTO OGGETTO
@@ -29,7 +29,14 @@ for(let i = 0; i < numOfCells; i++){
         gridElement.append(gridCell);
         // 4. INSERISCO IL NUMERO ALL'INTERNO DELL'ELEMENTO OGGETTO.
         gridCell.innerHTML += num;
-    })
-}
 
-//Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+        //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+        // MI METTO IN ASCOLTO DEL CLICK SULLA CELLA
+        gridCell.addEventListener("click", function(){
+            console.log("Hai cliccato la cella", num);
+            // QUANDO L'UTENTE CLICCA IL BACKGROUND-COLOR CAMBIERA'
+            this.classList.toggle("bg-azzure")
+        })
+    })
+
+}
