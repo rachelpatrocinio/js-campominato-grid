@@ -1,0 +1,75 @@
+:root{
+    --white: #ffffff;
+    --acqua: #7FFFD3;
+}
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* UTILITIES */
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+/* LAYOUT */
+
+body{
+    background-color: var(--acqua) ;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.main-header{
+    background-color: var(--white);
+    height: 80px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.main-header select{
+    padding: 5px;
+}
+
+.main-header .play-btn{
+    width: 100px;
+    padding: 5px;
+}
+
+/* MAIN */
+
+.main-content{
+    padding: 50px 0;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-cell{
+    aspect-ratio: 1/1;
+    width: calc (100% / 10);
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 100px;
+}
+
+.bg-white{
+    background-color: white;
+}
