@@ -22,13 +22,13 @@ playBtn.addEventListener("click", function(){
     // con difficoltà MEDIUM => 81 caselle DA 1 e 81 (9 x 9)
     // con difficoltà EASY => 49 caselle DA 1 e 49 (7 x 7)
     let size = 10;
-    let gridClass = 'hard';
-    if(difficulty.value === "easy"){
-        size = 7;
-        gridClass = 'easy';
-    }else if(difficulty.value === "medium"){
+    let gridClass = 'easy';
+    if(difficulty.value === "medium"){
         size = 9;
         gridClass = 'medium';
+    }else if(difficulty.value === "hard"){
+        size = 7;
+        gridClass = 'hard';
     }
 
     const numOfCells = size * size;

@@ -77,10 +77,11 @@ body{
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
+    cursor: pointer;
 }
 
 .hard{
-    width: calc(100% / 10);
+    width: calc(100% / 7);
 }
 
 .medium{
@@ -88,7 +89,7 @@ body{
 }
 
 .easy{
-    width: calc(100% / 7);
+    width: calc(100% / 10);
 }
 
 /* FOOTER */
